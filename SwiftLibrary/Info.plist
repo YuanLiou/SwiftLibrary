@@ -4,6 +4,11 @@
 <dict>
 	<key>Google Books Search ISBN</key>
 	<string>https://www.googleapis.com/books/v1/volumes?q=isbn:</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

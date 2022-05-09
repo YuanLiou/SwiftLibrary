@@ -244,7 +244,12 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="m1r-2t-xaM"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="authorLable" destination="csO-s9-itx" id="x8m-ro-y9M"/>
+                        <outlet property="descriptionLable" destination="KRY-mP-CjD" id="Ur4-VJ-SnU"/>
+                        <outlet property="publishDateLable" destination="AkX-DS-KlA" id="yB0-rL-KEf"/>
                         <outlet property="textIsbn" destination="5ho-EM-Lc2" id="dVx-um-ouF"/>
+                        <outlet property="thumbnailImage" destination="QBo-lD-3ro" id="w5q-bb-zok"/>
+                        <outlet property="titleLable" destination="voL-94-gi5" id="YxH-Y9-UBi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fcx-RZ-bHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -257,7 +262,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WOZ-ja-sfb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m4l-Ef-Rew">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

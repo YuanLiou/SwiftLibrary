@@ -11,6 +11,12 @@ import CoreData
 class NewBookViewController: UIViewController {
     
     @IBOutlet weak var textIsbn: UITextField!
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var authorLable: UILabel!
+    @IBOutlet weak var publishDateLable: UILabel!
+    @IBOutlet weak var descriptionLable: UITextView!
+    @IBOutlet weak var thumbnailImage: UIImageView!
+    
     var processedBook: Book?
 
     override func viewDidLoad() {
@@ -88,10 +94,40 @@ class NewBookViewController: UIViewController {
             self.processedBook!.descUri = infoLink
             self.processedBook!.imageUri = smallThumbnail
             
-            // Hide Progress HUD
-            
-            
+            DispatchQueue.main.async {
+                self.loadBookDetails(book: self.processedBook!)
+            }
         }
         task.resume() // execute the task
+    }
+    
+    private func loadBookDetails(book: Book) {
+        if let url = URL(string: book.imageUri!) {
+            UIImage.loadFrom(url: url) { image in
+                self.thumbnailImage.image = image
+            }
+        }
+        
+        titleLable.text = book.title
+        authorLable.text = book.author
+        publishDateLable.text = book.publishDate
+        descriptionLable.text = book.desc
+    }
+    
+}
+
+extension UIImage {
+    public static func loadFrom(url: URL, completion: @escaping (_ image: UIImage?) -> ()) {
+        DispatchQueue.global().async {
+            if let data = try? Data(contentsOf: url) {
+                DispatchQueue.main.async {
+                    completion(UIImage(data: data))
+                }
+            } else {
+                DispatchQueue.main.async {
+                    completion(nil)
+                }
+            }
+        }
     }
 }
