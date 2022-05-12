@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A06116D282AA56E00DC92AC /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A06116C282AA56E00DC92AC /* ProgressHUD.swift */; };
 		2A0FC5112806FB0D00DF06BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FC5102806FB0D00DF06BF /* AppDelegate.swift */; };
 		2A0FC5132806FB0D00DF06BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FC5122806FB0D00DF06BF /* SceneDelegate.swift */; };
 		2A0FC5152806FB0D00DF06BF /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0FC5142806FB0D00DF06BF /* LibraryViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A06116C282AA56E00DC92AC /* ProgressHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		2A0FC50D2806FB0D00DF06BF /* SwiftLibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftLibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A0FC5102806FB0D00DF06BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A0FC5122806FB0D00DF06BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				2ABE5211280D906D005CB4B7 /* BookTableViewCell.swift */,
+				2A06116C282AA56E00DC92AC /* ProgressHUD.swift */,
 			);
 			name = Views;
 			path = ..;
@@ -209,6 +212,7 @@
 				2ABE5212280D906D005CB4B7 /* BookTableViewCell.swift in Sources */,
 				2A0FC5112806FB0D00DF06BF /* AppDelegate.swift in Sources */,
 				2A0FC5132806FB0D00DF06BF /* SceneDelegate.swift in Sources */,
+				2A06116D282AA56E00DC92AC /* ProgressHUD.swift in Sources */,
 				2A0FC51B2806FB0D00DF06BF /* SwiftLibrary.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -356,6 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MLUKCT6HP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftLibrary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -383,6 +388,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4MLUKCT6HP;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SwiftLibrary/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

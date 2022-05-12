@@ -16,13 +16,27 @@ class NewBookViewController: UIViewController {
     @IBOutlet weak var publishDateLable: UILabel!
     @IBOutlet weak var descriptionLable: UITextView!
     @IBOutlet weak var thumbnailImage: UIImageView!
+    @IBOutlet weak var saveOptionButton: UIBarItem!
+    @IBOutlet weak var detailsView: UIView!
+    @IBOutlet weak var isbnSearchButton: UIButton!
     
     var processedBook: Book?
+    let progressHUD = ProgressHUD(text: "Pulling data")
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        detailsView.isHidden = true
+        saveOptionButton.isEnabled = false
+        
+        self.view.addSubview(progressHUD)
+        progressHUD.hide()
+    }
+    
+    @IBAction func onClickButtonSave(sender: AnyObject) {
+        saveManagedObjectContext()
+        showAlertViewController(message: "Book successfully added")
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onClickButtonCancel(sender: AnyObject) {
@@ -44,6 +58,8 @@ class NewBookViewController: UIViewController {
             self.showAlertViewController(message: "ISBN is empty")
             return
         }
+        
+        self.showProgressLoading()
         
         // Do the Http request
         // sample: https://www.googleapis.com/books/v1/volumes?q=isbn:<isbn>
@@ -96,6 +112,9 @@ class NewBookViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self.loadBookDetails(book: self.processedBook!)
+                self.detailsView.isHidden = false
+                self.saveOptionButton.isEnabled = true
+                self.hideProgressLoading()
             }
         }
         task.resume() // execute the task
@@ -114,6 +133,23 @@ class NewBookViewController: UIViewController {
         descriptionLable.text = book.desc
     }
     
+    private func showProgressLoading() {
+        self.progressHUD.show()
+        self.textIsbn.isUserInteractionEnabled = false
+        self.textIsbn.alpha = 0.3
+        
+        self.isbnSearchButton.isUserInteractionEnabled = false
+        self.isbnSearchButton.alpha = 0.3
+    }
+    
+    private func hideProgressLoading() {
+        self.progressHUD.hide()
+        self.textIsbn.isUserInteractionEnabled = true
+        self.textIsbn.alpha = 1.0
+        
+        self.isbnSearchButton.isUserInteractionEnabled = true
+        self.isbnSearchButton.alpha = 1.0
+    }
 }
 
 extension UIImage {

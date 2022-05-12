@@ -197,7 +197,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-mP-CjD">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="KRY-mP-CjD">
                                                 <rect key="frame" x="0.0" y="22.5" width="288" height="83.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -241,12 +241,19 @@
                                 <action selector="onClickButtonCancelWithSender:" destination="m7C-18-JLg" id="Glc-Tm-uYV"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m1r-2t-xaM"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m1r-2t-xaM">
+                            <connections>
+                                <action selector="onClickButtonSaveWithSender:" destination="m7C-18-JLg" id="JdM-Ji-tDJ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="authorLable" destination="csO-s9-itx" id="x8m-ro-y9M"/>
                         <outlet property="descriptionLable" destination="KRY-mP-CjD" id="Ur4-VJ-SnU"/>
+                        <outlet property="detailsView" destination="YAF-RT-ggw" id="ifs-G5-mKr"/>
+                        <outlet property="isbnSearchButton" destination="HnX-DB-r0x" id="Ysq-ZX-ViN"/>
                         <outlet property="publishDateLable" destination="AkX-DS-KlA" id="yB0-rL-KEf"/>
+                        <outlet property="saveOptionButton" destination="m1r-2t-xaM" id="yVb-iF-IDF"/>
                         <outlet property="textIsbn" destination="5ho-EM-Lc2" id="dVx-um-ouF"/>
                         <outlet property="thumbnailImage" destination="QBo-lD-3ro" id="w5q-bb-zok"/>
                         <outlet property="titleLable" destination="voL-94-gi5" id="YxH-Y9-UBi"/>
@@ -262,7 +269,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WOZ-ja-sfb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m4l-Ef-Rew">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
