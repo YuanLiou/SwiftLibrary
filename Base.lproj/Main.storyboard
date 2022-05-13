@@ -56,6 +56,11 @@
                                         <constraint firstAttribute="bottom" secondItem="UaA-D7-RTQ" secondAttribute="bottom" constant="8" id="zZG-tR-7qa"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgThumbnail" destination="UaA-D7-RTQ" id="dqR-bX-MVR"/>
+                                    <outlet property="labelAuthor" destination="T8O-QY-XE9" id="DEs-qT-Bd7"/>
+                                    <outlet property="labelTitle" destination="hNg-sS-sU0" id="Olx-tJ-w0z"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
@@ -269,7 +274,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WOZ-ja-sfb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m4l-Ef-Rew">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

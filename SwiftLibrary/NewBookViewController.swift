@@ -36,7 +36,6 @@ class NewBookViewController: UIViewController {
     @IBAction func onClickButtonSave(sender: AnyObject) {
         saveManagedObjectContext()
         showAlertViewController(message: "Book successfully added")
-        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onClickButtonCancel(sender: AnyObject) {
@@ -149,21 +148,5 @@ class NewBookViewController: UIViewController {
         
         self.isbnSearchButton.isUserInteractionEnabled = true
         self.isbnSearchButton.alpha = 1.0
-    }
-}
-
-extension UIImage {
-    public static func loadFrom(url: URL, completion: @escaping (_ image: UIImage?) -> ()) {
-        DispatchQueue.global().async {
-            if let data = try? Data(contentsOf: url) {
-                DispatchQueue.main.async {
-                    completion(UIImage(data: data))
-                }
-            } else {
-                DispatchQueue.main.async {
-                    completion(nil)
-                }
-            }
-        }
     }
 }

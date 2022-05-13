@@ -8,4 +8,7 @@
 import UIKit
 
 class BookTableViewCell: UITableViewCell {
+    @IBOutlet weak var labelTitle: UILabel!
+    @IBOutlet weak var imgThumbnail: UIImageView!
+    @IBOutlet weak var labelAuthor: UILabel!
 }
