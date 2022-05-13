@@ -66,9 +66,11 @@ extension UIViewController {
         }
     }
     
-    func showAlertViewController(message: String) {
+    func showAlertViewController(message: String, onDismiss dismissDialog: ((UIAlertAction) -> Void)? = nil) {
         let alertController = UIAlertController(title: "SwiftLibrary", message: message, preferredStyle: UIAlertController.Style.alert)
-        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default, handler: nil))
+        alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default) { alertAction in
+            dismissDialog?(alertAction)
+        })
         self.present(alertController, animated: true, completion: nil)
     }
 }

@@ -35,7 +35,9 @@ class NewBookViewController: UIViewController {
     
     @IBAction func onClickButtonSave(sender: AnyObject) {
         saveManagedObjectContext()
-        showAlertViewController(message: "Book successfully added")
+        showAlertViewController(message: "Book successfully added") { alertAction in
+            self.dismiss(animated: true)
+        }
     }
     
     @IBAction func onClickButtonCancel(sender: AnyObject) {
