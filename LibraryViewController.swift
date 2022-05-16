@@ -61,5 +61,20 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            // remove the deleted item from the model
+            managedObjectContext.delete(books[indexPath.row])
+            books.remove(at: indexPath.row)
+            saveManagedObjectContext()
+            
+            // remove the deleted item from the `UITableView`
+            self.tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.fade)
+            
+        default:
+            return
+        }
+    }
 }
-
