@@ -24,7 +24,6 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        print("view did appear")
         let fetchRequest = NSFetchRequest<Book>(entityName: "Book")
         do {
             let results = try managedObjectContext.fetch(fetchRequest)

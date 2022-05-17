@@ -60,6 +60,7 @@
                                     <outlet property="imgThumbnail" destination="UaA-D7-RTQ" id="dqR-bX-MVR"/>
                                     <outlet property="labelAuthor" destination="T8O-QY-XE9" id="DEs-qT-Bd7"/>
                                     <outlet property="labelTitle" destination="hNg-sS-sU0" id="Olx-tJ-w0z"/>
+                                    <segue destination="gW7-3l-ZeV" kind="showDetail" id="ujS-k5-p3Y"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -67,7 +68,7 @@
                     <navigationItem key="navigationItem" title="SwiftLibrary" id="PrP-rD-Sw5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="8Pa-DJ-bEW">
                             <connections>
-                                <segue destination="J1m-DN-Uj3" kind="presentation" modalPresentationStyle="fullScreen" id="hzc-lU-dhl"/>
+                                <segue destination="m7C-18-JLg" kind="show" id="5WD-DS-WNJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -78,6 +79,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="571" y="115"/>
+        </scene>
+        <!--Book Detail View Controller-->
+        <scene sceneID="o8v-cC-tKg">
+            <objects>
+                <viewController id="5ex-8d-RWG" userLabel="Book Detail View Controller" customClass="BookDetailViewController" customModule="SwiftLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KCX-o6-2sN">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uNi-fK-kK7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Book Details" id="KSx-5n-T49">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Meq-re-jP3">
+                            <connections>
+                                <action selector="onClickCancelButtonWithSender:" destination="5ex-8d-RWG" id="yqa-Na-QI4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1pM-Lo-AX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1567.5" y="900"/>
         </scene>
         <!--New Book View Controller-->
         <scene sceneID="X2e-0t-zcB">
@@ -115,7 +138,7 @@
                                             <constraint firstAttribute="height" constant="40" id="Gsl-b4-GxX"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Search"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Search and Save"/>
                                         <connections>
                                             <action selector="onClickButtonSearchWithSender:" destination="m7C-18-JLg" eventType="touchUpInside" id="m2U-Jv-3bk"/>
                                         </connections>
@@ -240,25 +263,12 @@
                             <constraint firstItem="OP5-ME-fUa" firstAttribute="top" secondItem="Tjf-l8-zAU" secondAttribute="top" constant="12" id="yN1-Ab-Dt2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="New Book" id="Eb1-p2-Q1M">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Uvc-FQ-tKB">
-                            <connections>
-                                <action selector="onClickButtonCancelWithSender:" destination="m7C-18-JLg" id="Glc-Tm-uYV"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="m1r-2t-xaM">
-                            <connections>
-                                <action selector="onClickButtonSaveWithSender:" destination="m7C-18-JLg" id="JdM-Ji-tDJ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
                         <outlet property="authorLable" destination="csO-s9-itx" id="x8m-ro-y9M"/>
                         <outlet property="descriptionLable" destination="KRY-mP-CjD" id="Ur4-VJ-SnU"/>
                         <outlet property="detailsView" destination="YAF-RT-ggw" id="ifs-G5-mKr"/>
                         <outlet property="isbnSearchButton" destination="HnX-DB-r0x" id="Ysq-ZX-ViN"/>
                         <outlet property="publishDateLable" destination="AkX-DS-KlA" id="yB0-rL-KEf"/>
-                        <outlet property="saveOptionButton" destination="m1r-2t-xaM" id="yVb-iF-IDF"/>
                         <outlet property="textIsbn" destination="5ho-EM-Lc2" id="dVx-um-ouF"/>
                         <outlet property="thumbnailImage" destination="QBo-lD-3ro" id="w5q-bb-zok"/>
                         <outlet property="titleLable" destination="voL-94-gi5" id="YxH-Y9-UBi"/>
@@ -266,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fcx-RZ-bHE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2347.5" y="113.75"/>
+            <point key="canvasLocation" x="1513" y="115"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="hMK-Mo-kJQ">
@@ -274,7 +284,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WOZ-ja-sfb" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m4l-Ef-Rew">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -287,23 +297,22 @@
             <point key="canvasLocation" x="-280" y="115"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="Pqc-1m-skD">
+        <scene sceneID="clG-Ki-HfP">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J1m-DN-Uj3" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gW7-3l-ZeV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="XD9-NE-4eg"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FAb-gF-XZn">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TcP-x4-IqR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="m7C-18-JLg" kind="relationship" relationship="rootViewController" id="ufr-0b-seC"/>
+                        <segue destination="5ex-8d-RWG" kind="relationship" relationship="rootViewController" id="6yy-Rm-geR"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uyu-mN-5WJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRG-Yy-gX6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1437.68115942029" y="114.50892857142857"/>
+            <point key="canvasLocation" x="570" y="900"/>
         </scene>
     </scenes>
     <resources>

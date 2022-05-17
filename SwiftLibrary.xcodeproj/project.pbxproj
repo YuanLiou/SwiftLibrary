@@ -17,6 +17,7 @@
 		2A0FC5202806FB0D00DF06BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A0FC51E2806FB0D00DF06BF /* LaunchScreen.storyboard */; };
 		2A45BC702808588A00D1151F /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45BC6E2808588A00D1151F /* Book+CoreDataClass.swift */; };
 		2A45BC712808588A00D1151F /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A45BC6F2808588A00D1151F /* Book+CoreDataProperties.swift */; };
+		2A490B142833F39900993514 /* BookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A490B132833F39900993514 /* BookDetailViewController.swift */; };
 		2AA435AA2812D7D500F6820B /* NewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA435A92812D7D500F6820B /* NewBookViewController.swift */; };
 		2ABE5212280D906D005CB4B7 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE5211280D906D005CB4B7 /* BookTableViewCell.swift */; };
 		2ADE0857281966D50099A91D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ADE0856281966D50099A91D /* Utils.swift */; };
@@ -35,6 +36,7 @@
 		2A0FC5212806FB0D00DF06BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A45BC6E2808588A00D1151F /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2A45BC6F2808588A00D1151F /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2A490B132833F39900993514 /* BookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailViewController.swift; sourceTree = "<group>"; };
 		2AA435A92812D7D500F6820B /* NewBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NewBookViewController.swift; path = SwiftLibrary/NewBookViewController.swift; sourceTree = "<group>"; };
 		2ABE5211280D906D005CB4B7 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BookTableViewCell.swift; path = SwiftLibrary/BookTableViewCell.swift; sourceTree = "<group>"; };
 		2ADE0856281966D50099A91D /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		2A0FC5292806FD1E00DF06BF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A490B132833F39900993514 /* BookDetailViewController.swift */,
 				2A0FC5142806FB0D00DF06BF /* LibraryViewController.swift */,
 				2AA435A92812D7D500F6820B /* NewBookViewController.swift */,
 			);
@@ -208,6 +211,7 @@
 				2A0FC5152806FB0D00DF06BF /* LibraryViewController.swift in Sources */,
 				2ADE0857281966D50099A91D /* Utils.swift in Sources */,
 				2AA435AA2812D7D500F6820B /* NewBookViewController.swift in Sources */,
+				2A490B142833F39900993514 /* BookDetailViewController.swift in Sources */,
 				2A45BC712808588A00D1151F /* Book+CoreDataProperties.swift in Sources */,
 				2ABE5212280D906D005CB4B7 /* BookTableViewCell.swift in Sources */,
 				2A0FC5112806FB0D00DF06BF /* AppDelegate.swift in Sources */,

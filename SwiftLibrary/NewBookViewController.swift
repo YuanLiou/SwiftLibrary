@@ -16,7 +16,6 @@ class NewBookViewController: UIViewController {
     @IBOutlet weak var publishDateLable: UILabel!
     @IBOutlet weak var descriptionLable: UITextView!
     @IBOutlet weak var thumbnailImage: UIImageView!
-    @IBOutlet weak var saveOptionButton: UIBarItem!
     @IBOutlet weak var detailsView: UIView!
     @IBOutlet weak var isbnSearchButton: UIButton!
     
@@ -27,21 +26,9 @@ class NewBookViewController: UIViewController {
         super.viewDidLoad()
 
         detailsView.isHidden = true
-        saveOptionButton.isEnabled = false
         
         self.view.addSubview(progressHUD)
         progressHUD.hide()
-    }
-    
-    @IBAction func onClickButtonSave(sender: AnyObject) {
-        saveManagedObjectContext()
-        showAlertViewController(message: "Book successfully added") { alertAction in
-            self.dismiss(animated: true)
-        }
-    }
-    
-    @IBAction func onClickButtonCancel(sender: AnyObject) {
-        self.dismiss(animated:true, completion: nil)
     }
     
     @IBAction func onClickButtonSearch(sender: AnyObject) {
@@ -114,8 +101,8 @@ class NewBookViewController: UIViewController {
             DispatchQueue.main.async {
                 self.loadBookDetails(book: self.processedBook!)
                 self.detailsView.isHidden = false
-                self.saveOptionButton.isEnabled = true
                 self.hideProgressLoading()
+                self.showSaveSuccessDialog()
             }
         }
         task.resume() // execute the task
@@ -132,6 +119,11 @@ class NewBookViewController: UIViewController {
         authorLable.text = book.author
         publishDateLable.text = book.publishDate
         descriptionLable.text = book.desc
+    }
+    
+    func showSaveSuccessDialog() {
+//        saveManagedObjectContext()
+        showAlertViewController(message: "Book successfully added")
     }
     
     private func showProgressLoading() {
