@@ -8,25 +8,17 @@
 import UIKit
 
 class BookDetailViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    @IBOutlet weak var titleLable: UILabel!
+    @IBOutlet weak var authorLable: UILabel!
+    @IBOutlet weak var publishDateLable: UILabel!
+    @IBOutlet weak var descriptionLable: UITextView!
+    @IBOutlet weak var thumbnailImage: UIImageView!
     
     @IBAction func onClickCancelButton(sender: AnyObject) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func onClickViewInfoPage(sender: AnyObject) {
     }
 }
