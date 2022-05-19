@@ -76,4 +76,19 @@ class LibraryViewController: UIViewController, UITableViewDelegate, UITableViewD
             return
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Basically Android's intent
+        if segue.identifier == "PresentBookDetail" {
+            let navigationController = segue.destination as? UINavigationController
+            let bookDetailViewController = navigationController?.topViewController as! BookDetailViewController
+        
+            // Get the cell that generated this segue
+            if let selectedBookCell = sender as? BookTableViewCell {
+                let indexPath = tableView.indexPath(for: selectedBookCell)!
+                let selectedBook = books[indexPath.row]
+                bookDetailViewController.selectedBook = selectedBook
+            }
+        }
+    }
 }

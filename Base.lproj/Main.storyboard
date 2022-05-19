@@ -60,7 +60,7 @@
                                     <outlet property="imgThumbnail" destination="UaA-D7-RTQ" id="dqR-bX-MVR"/>
                                     <outlet property="labelAuthor" destination="T8O-QY-XE9" id="DEs-qT-Bd7"/>
                                     <outlet property="labelTitle" destination="hNg-sS-sU0" id="Olx-tJ-w0z"/>
-                                    <segue destination="gW7-3l-ZeV" kind="showDetail" id="ujS-k5-p3Y"/>
+                                    <segue destination="gW7-3l-ZeV" kind="showDetail" identifier="PresentBookDetail" id="ujS-k5-p3Y"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -89,7 +89,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="eIr-Kr-QlI" userLabel="stack_desc">
-                                <rect key="frame" x="8" y="248" width="304" height="177"/>
+                                <rect key="frame" x="8" y="248" width="304" height="188.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQX-rD-Hdx">
                                         <rect key="frame" x="0.0" y="0.0" width="304" height="20.5"/>
@@ -98,7 +98,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gUg-dZ-Swj">
-                                        <rect key="frame" x="0.0" y="22.5" width="304" height="154.5"/>
+                                        <rect key="frame" x="0.0" y="22.5" width="304" height="166"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
@@ -115,7 +115,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cd3-Zy-zNo">
-                                <rect key="frame" x="8" y="433" width="304" height="31"/>
+                                <rect key="frame" x="8" y="444.5" width="304" height="19.5"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="View Info Page"/>
                                 <connections>
@@ -416,7 +416,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gW7-3l-ZeV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TcP-x4-IqR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
