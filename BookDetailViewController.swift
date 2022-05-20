@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class BookDetailViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class BookDetailViewController: UIViewController {
     @IBOutlet weak var publishDateLable: UILabel!
     @IBOutlet weak var descriptionLable: UITextView!
     @IBOutlet weak var thumbnailImage: UIImageView!
+    @IBOutlet weak var viewInfoPageButton: UIButton!
     
     var selectedBook: Book? = nil
     
@@ -36,6 +38,13 @@ class BookDetailViewController: UIViewController {
         descriptionLable.text = book.desc
         
         self.navigationItem.title = book.title
+        
+        // Check if selected book has descUri
+        if book.descUri != nil && book.desc?.isEmpty == false {
+            viewInfoPageButton.isEnabled = true
+        } else {
+            viewInfoPageButton.isEnabled = false
+        }
     }
     
     @IBAction func onClickCancelButton(sender: AnyObject) {
@@ -43,5 +52,13 @@ class BookDetailViewController: UIViewController {
     }
     
     @IBAction func onClickViewInfoPage(sender: AnyObject) {
+        guard
+            let url = URL(string: selectedBook!.descUri!)
+        else {
+            fatalError("Couldn't parse url to NSURL \(selectedBook!.descUri!)")
+        }
+        
+        let safariViewController = SFSafariViewController(url: url)
+        self.present(safariViewController, animated: true, completion: nil)
     }
 }

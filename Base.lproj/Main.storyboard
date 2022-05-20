@@ -210,6 +210,7 @@
                         <outlet property="publishDateLable" destination="pgg-6v-tny" id="Emi-hL-ugK"/>
                         <outlet property="thumbnailImage" destination="fgZ-re-hbM" id="iWh-sA-js4"/>
                         <outlet property="titleLable" destination="5II-yR-YkG" id="5E5-dH-nMM"/>
+                        <outlet property="viewInfoPageButton" destination="cd3-Zy-zNo" id="eOp-i5-T7g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pM-Lo-AX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -416,7 +417,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gW7-3l-ZeV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="TcP-x4-IqR">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
